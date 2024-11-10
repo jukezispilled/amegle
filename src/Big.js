@@ -14,7 +14,7 @@ function ChatBox({ messages, onNewChat }) {
                 New Chat
             </button>
         </div>
-        <div className='mt-16'>
+        <div className='mt-24'>
             {messages.map((msg, index) => (
                 <div
                 key={index}
