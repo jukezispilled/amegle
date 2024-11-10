@@ -108,7 +108,7 @@ function WebcamView({ isSelf, videoSrc, videoKey }) {
 function Big() {
   const [messages, setMessages] = useState([]);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
-  const [videoKey, setVideoKey] = useState(0); // Add key for forcing video reload
+  const [videoKey, setVideoKey] = useState(0);
   
   // List of videos
   const videos = [
@@ -126,26 +126,31 @@ function Big() {
   const handleSendMessage = (message) => {
     setMessages((prevMessages) => [...prevMessages, { text: message, sender: 'You' }]);
 
-    // Select a random response from the current video
-    const randomResponse = videos[currentVideoIndex].responses[Math.floor(Math.random() * videos[currentVideoIndex].responses.length)];
+    // Check for specific keywords and respond accordingly
+    let response;
+    if (message.toLowerCase().includes("ca")) {
+      response = "updating...";
+    } else if (message.toLowerCase().includes("twitter") || message.toLowerCase().includes("x")) {
+      response = <a href="https://x.com/amegleonline" target="_blank" rel="noopener noreferrer" className='underline text-blue-700'>Follow us on Twitter/X</a>;
+    } else if (message.toLowerCase().includes("telegram") || message.toLowerCase().includes("tg")) {
+      response = <a href="https://t.me/amegleportal" target="_blank" rel="noopener noreferrer" className='underline text-blue-700'>Join us on Telegram</a>;
+    } else {
+      // Select a random response from the current video
+      response = videos[currentVideoIndex].responses[Math.floor(Math.random() * videos[currentVideoIndex].responses.length)];
+    }
 
     setTimeout(() => {
       setMessages((prevMessages) => [
         ...prevMessages,
-        { text: randomResponse, sender: 'Stranger' },
+        { text: response, sender: 'Stranger' },
       ]);
     }, 1000);
   };
 
   const handleNewChat = () => {
-    // Clear messages
     setMessages([]);
-    
-    // Update video index and loop back to start if needed
     setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length);
-    
-    // Increment key to force video reload
-    setVideoKey(prev => prev + 1);
+    setVideoKey((prev) => prev + 1);
   };
 
   return (
