@@ -55,7 +55,7 @@ function ChatModal({ isOpen, onClose, messages, onSendMessage }) {
           <div className="flex gap-2">
             <input
               type="text"
-              placeholder="Type a message... or ca/x/tg"
+              placeholder="Type a message..."
               value={input}
               onChange={(e) => setInput(e.target.value)}
               className="flex-1 p-2 border border-[#FCF5ED] outline-none"
