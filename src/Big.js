@@ -57,7 +57,7 @@ function MessageInput({ onSendMessage }) {
         </button>
         <input
           type="text"
-          placeholder="Type a message..."
+          placeholder="Type a message... or ca/x/tg"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={handleKeyDown}
