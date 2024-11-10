@@ -70,9 +70,14 @@ function MessageInput({ onSendMessage }) {
 // Header Component
 function Header() {
   return (
-    <div className="w-full h-[7.5dvh] p-4 text-center text-2xl font-bold border-b border-[#FCF5ED] flex items-center">
-      <img src="amegle.png" className='h-[100%]' />
-      <div className='ml-[25%] -rotate-3'>Talk to animals!</div>
+    <div className="w-full h-[7.5dvh] p-4 text-center text-2xl font-bold border-b border-[#FCF5ED] flex items-center justify-between">
+        <div className='flex items-center h-full'>
+            <img src="amegle.png" className='h-[100%]' />
+            <div className='ml-[50%] -rotate-3 whitespace-nowrap'>Talk to animals!</div>         
+        </div>
+        <div className='text-blue-500 text-3xl'>
+            42069+ <span className='text-blue-300 text-xl'>online now</span>
+        </div>
     </div>
   );
 }
