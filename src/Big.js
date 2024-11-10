@@ -5,12 +5,15 @@ import Webcam from 'react-webcam';
 function ChatBox({ messages, onNewChat }) {
   return (
     <div className="flex flex-col w-full h-[85dvh] overflow-y-auto border border-[#FCF5ED] relative">
-        <button
-            onClick={onNewChat}
-            className="absolute top-2 left-2 px-5 py-3 bg-gradient-to-b from-blue-500 to-blue-700 hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-800 text-white font-semibold"
-            >
-            New Chat
-        </button>
+        <div className='absolute top-2 left-2 grid font-semibold'>
+            You are now chatting with a random animal. SAY STAND WITH HONG KONG AGAINST THE CCP!
+            <button
+                onClick={onNewChat}
+                className="w-min whitespace-nowrap px-5 py-3 bg-gradient-to-b from-blue-500 to-blue-700 hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-800 text-white font-semibold"
+                >
+                New Chat
+            </button>
+        </div>
         <div className='mt-16'>
             {messages.map((msg, index) => (
                 <div
