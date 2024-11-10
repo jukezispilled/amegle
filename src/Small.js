@@ -5,7 +5,7 @@ import { MessageCircle, X } from 'lucide-react';
 // Header Component
 function Header() {
   return (
-    <div className="w-full h-[7.5dvh] px-4 flex items-center border-b border-[#FCF5ED]">
+    <div className="w-full h-[7.5dvh] py-3 px-4 flex items-center border-b border-[#FCF5ED]">
       <img src="amegle.png" className="w-[125px]" />
       <div className="ml-[25%] -rotate-3 font-bold">Talk to animals!</div>
     </div>
