@@ -112,7 +112,7 @@ function Small() {
 
   // List of videos and their possible responses
   const videos = [
-    { src: '/user9.mp4', responses: ['kinda busy rn bro', 'don\'nt you see i\'m playing the game', 'ok fine what\'s on your mind lil bro', 'just buy the coin bro', 'ticker is $amegle', 'chill tf out i\'m about to break my high score', 'talk to me when your in a lambo'] },
+    { src: '/user9.mp4', responses: ['kinda busy rn bro', 'don\'t you see i\'m playing the game', 'ok fine what\'s on your mind lil bro', 'just buy the coin bro', 'ticker is $amegle', 'chill tf out i\'m about to break my high score', 'talk to me when your in a lambo'] },
     { src: '/user1.mp4', responses: ['sup pussy', 'how are you?', 'just buy the coin bro', 'ticker is $amegle', 'pussy'] },
     { src: '/user2.mp4', responses: ['rawr rawr rawr', 'tf you lookin at', 'how can I help you today?', 'you\'re the one with the weird peanut butter habit right'] },
     { src: '/user3.mp4', responses: ['greetings!', 'how\'s it going?', 'what\'s your name?', 'wya', 'just buy the coin bro', 'ticker is $amegle'] },
