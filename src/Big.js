@@ -29,33 +29,40 @@ function ChatBox({ messages, onNewChat }) {
 
 // MessageInput Component
 function MessageInput({ onSendMessage }) {
-  const [input, setInput] = useState('');
-
-  const handleSend = () => {
-    if (input.trim() !== '') {
-      onSendMessage(input);
-      setInput('');
-    }
-  };
-
-  return (
-    <div className="flex w-full h-[7.5dvh]">
-      <button
-        onClick={handleSend}
-        className="px-4 py-2 bg-gradient-to-b from-blue-500 to-blue-700 hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-800 border border-[#FCF5ED] text-white font-semibold"
-      >
-        Send
-      </button>
-      <input
-        type="text"
-        placeholder="Type a message..."
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        className="flex-grow p-2 border border-[#FCF5ED] outline-none"
-      />
-    </div>
-  );
-}
+    const [input, setInput] = useState('');
+  
+    const handleSend = () => {
+      if (input.trim() !== '') {
+        onSendMessage(input);
+        setInput('');
+      }
+    };
+  
+    const handleKeyDown = (e) => {
+      if (e.key === 'Enter') {
+        handleSend();
+      }
+    };
+  
+    return (
+      <div className="flex w-full h-[7.5dvh]">
+        <button
+          onClick={handleSend}
+          className="px-4 py-2 bg-gradient-to-b from-blue-500 to-blue-700 hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-800 border border-[#FCF5ED] text-white font-semibold"
+        >
+          Send
+        </button>
+        <input
+          type="text"
+          placeholder="Type a message..."
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onKeyDown={handleKeyDown}
+          className="flex-grow p-2 border border-[#FCF5ED] outline-none"
+        />
+      </div>
+    );
+}  
 
 // Header Component
 function Header() {
@@ -105,6 +112,7 @@ function Big() {
   
   // List of videos
   const videos = [
+    { src: '/user9.mp4', responses: ['kinda busy rn bro', 'don\'nt you see i\'m playing the game', 'ok fine what\'s on your mind lil bro', 'just buy the coin bro', 'ticker is $amegle', 'chill tf out i\'m about to break my high score', 'talk to me when your in a lambo'] },
     { src: '/user1.mp4', responses: ['sup pussy', 'how are you?', 'just buy the coin bro', 'ticker is $amegle', 'pussy'] },
     { src: '/user2.mp4', responses: ['rawr rawr rawr', 'tf you lookin at', 'how can I help you today?', 'you\'re the one with the weird peanut butter habit right'] },
     { src: '/user3.mp4', responses: ['greetings!', 'how\'s it going?', 'what\'s your name?', 'wya', 'just buy the coin bro', 'ticker is $amegle'] },
