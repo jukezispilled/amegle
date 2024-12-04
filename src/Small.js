@@ -55,7 +55,7 @@ function ChatModal({ isOpen, onClose, messages, onSendMessage }) {
           <div className="flex gap-2">
             <input
               type="text"
-              placeholder="Type a message..."
+              placeholder="Type a message or ca/x/tg"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               className="flex-1 p-2 border border-[#FCF5ED] outline-none"
@@ -131,9 +131,9 @@ function Small() {
     if (message.toLowerCase().includes("ca")) {
       response = "updating...";
     } else if (message.toLowerCase().includes("twitter") || message.toLowerCase().includes("x")) {
-      response = <a href="https://x.com/amegleonline" target="_blank" rel="noopener noreferrer" className='underline text-blue-700'>Follow us on Twitter/X</a>;
+      response = <a href="https://x.com/aimegle89178" target="_blank" rel="noopener noreferrer" className='underline text-blue-700'>Follow us on Twitter/X</a>;
     } else if (message.toLowerCase().includes("telegram") || message.toLowerCase().includes("tg")) {
-      response = <a href="https://t.me/amegleportal" target="_blank" rel="noopener noreferrer" className='underline text-blue-700'>Join us on Telegram</a>;
+      response = <a href="https://t.me/aimegle" target="_blank" rel="noopener noreferrer" className='underline text-blue-700'>Join us on Telegram</a>;
     } else {
       // Select a random response from the current video
       response = videos[currentVideoIndex].responses[Math.floor(Math.random() * videos[currentVideoIndex].responses.length)];
@@ -142,7 +142,7 @@ function Small() {
     setTimeout(() => {
       setMessages((prevMessages) => [
         ...prevMessages,
-        { text: response, sender: 'Stranger' },
+        { text: response, sender: 'Animal' },
       ]);
     }, 1000);
   };
