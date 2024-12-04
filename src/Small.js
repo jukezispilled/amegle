@@ -129,7 +129,7 @@ function Small() {
     // Check for specific keywords and respond accordingly
     let response;
     if (message.toLowerCase().includes("ca")) {
-      response = "updating...";
+      response = "GNffBwTbsRLSeFamRvtogVTzrTtoyxQbQTZDwpeipump";
     } else if (message.toLowerCase().includes("twitter") || message.toLowerCase().includes("x")) {
       response = <a href="https://x.com/aimegle89178" target="_blank" rel="noopener noreferrer" className='underline text-blue-700'>Follow us on Twitter/X</a>;
     } else if (message.toLowerCase().includes("telegram") || message.toLowerCase().includes("tg")) {
