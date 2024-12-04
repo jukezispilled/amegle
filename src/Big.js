@@ -57,7 +57,7 @@ function MessageInput({ onSendMessage }) {
         </button>
         <input
           type="text"
-          placeholder="Type a message..."
+          placeholder="Type a message or ca/x/tg"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={handleKeyDown}
@@ -70,7 +70,7 @@ function MessageInput({ onSendMessage }) {
 // Header Component
 function Header() {
   return (
-    <div className="w-full h-[7.5dvh] p-4 text-center text-2xl font-bold border-b border-[#FCF5ED] flex items-center justify-between">
+    <div className="w-full h-[7.5dvh] p-2 text-center text-2xl font-bold border-b border-[#FCF5ED] flex items-center justify-between">
         <div className='flex items-center h-full'>
             <img src="amegle.png" className='h-[100%]' />
             <div className='ml-[50%] -rotate-3 whitespace-nowrap'>Talk to animals!</div>         
@@ -139,9 +139,9 @@ function Big() {
     if (message.toLowerCase().includes("ca")) {
       response = "updating...";
     } else if (message.toLowerCase().includes("twitter") || message.toLowerCase().includes("x")) {
-      response = <a href="https://x.com/amegleonline" target="_blank" rel="noopener noreferrer" className='underline text-blue-700'>Follow us on Twitter/X</a>;
+      response = <a href="https://x.com/" target="_blank" rel="noopener noreferrer" className='underline text-blue-700'>Follow us on Twitter/X</a>;
     } else if (message.toLowerCase().includes("telegram") || message.toLowerCase().includes("tg")) {
-      response = <a href="https://t.me/amegleportal" target="_blank" rel="noopener noreferrer" className='underline text-blue-700'>Join us on Telegram</a>;
+      response = <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className='underline text-blue-700'>Join us on Telegram</a>;
     } else {
       // Select a random response from the current video
       response = videos[currentVideoIndex].responses[Math.floor(Math.random() * videos[currentVideoIndex].responses.length)];
@@ -150,7 +150,7 @@ function Big() {
     setTimeout(() => {
       setMessages((prevMessages) => [
         ...prevMessages,
-        { text: response, sender: 'Stranger' },
+        { text: response, sender: 'Animal' },
       ]);
     }, 1000);
   };
