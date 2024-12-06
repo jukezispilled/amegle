@@ -62,7 +62,7 @@ function ChatModal({ isOpen, onClose, messages, onSendMessage }) {
             />
             <button
               onClick={handleSend}
-              className="px-4 py-2 bg-gradient-to-b from-blue-500 to-blue-700 hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-800 text-white font-semibold"
+              className="px-4 py-2 text-white font-semibold"
             >
               Send
             </button>
@@ -94,7 +94,7 @@ function WebcamView({ isSelf, videoSrc, videoKey, onNewChat }) {
           </video>
           <button
             onClick={onNewChat}
-            className="absolute top-3 left-3 px-4 py-2 bg-gradient-to-b from-blue-500 to-blue-700 hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-800 text-white font-semibold z-10"
+            className="absolute top-3 left-3 px-4 py-2 text-white font-semibold z-10"
           >
             New Chat
           </button>
@@ -172,7 +172,7 @@ function Small() {
 
         <button
           onClick={() => setIsChatOpen(true)}
-          className="absolute bottom-4 right-4 p-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg"
+          className="absolute bottom-4 right-4 p-3 text-white rounded-full shadow-lg"
         >
           <MessageCircle className="w-6 h-6" />
         </button>

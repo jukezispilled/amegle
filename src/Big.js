@@ -9,7 +9,7 @@ function ChatBox({ messages, onNewChat }) {
             You are now chatting with a random animal. SAY STAND WITH HONG KONG AGAINST THE CCP!
             <button
                 onClick={onNewChat}
-                className="w-min whitespace-nowrap px-5 py-3 bg-gradient-to-b from-blue-500 to-blue-700 hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-800 text-white font-semibold"
+                className="w-min whitespace-nowrap px-5 py-3 text-white font-semibold"
                 >
                 New Chat
             </button>
@@ -51,7 +51,7 @@ function MessageInput({ onSendMessage }) {
       <div className="flex w-full h-[7.5dvh]">
         <button
           onClick={handleSend}
-          className="px-4 py-2 bg-gradient-to-b from-blue-500 to-blue-700 hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-800 border border-[#FCF5ED] text-white font-semibold"
+          className="px-4 py-2 border border-[#FCF5ED] text-white font-semibold"
         >
           Send
         </button>
@@ -75,8 +75,8 @@ function Header() {
             <span className='text-3xl font-semibold whitespace-nowrap'>ai v0.1</span>
             <div className='ml-[50%] -rotate-3 whitespace-nowrap'>Talk to animals!</div>         
         </div>
-        <div className='text-blue-500 text-3xl'>
-            42069+ <span className='text-blue-300 text-xl'>online now</span>
+        <div className='text-3xl'>
+            42069+ <span className='text-xl'>online now</span>
         </div>
     </div>
   );
