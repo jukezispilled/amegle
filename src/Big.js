@@ -72,7 +72,7 @@ function Header() {
   return (
     <div className="w-full h-[7.5dvh] p-2 text-center text-2xl font-bold border-b border-[#FCF5ED] flex items-center justify-between">
         <div className='flex items-center h-full'>
-            <img src="amegle.png" className='h-[100%]' />
+            <span className='text-3xl font-semibold whitespace-nowrap'>ai v0.1</span>
             <div className='ml-[50%] -rotate-3 whitespace-nowrap'>Talk to animals!</div>         
         </div>
         <div className='text-blue-500 text-3xl'>
@@ -101,11 +101,6 @@ function WebcamView({ isSelf, videoSrc, videoKey }) {
             <source src={videoSrc} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <img
-            src="amegle.png"
-            className="w-[200px] absolute bottom-4 left-4 z-20"
-            alt="Omegle Logo"
-          />
         </div>
       )}
     </div>
@@ -137,9 +132,9 @@ function Big() {
     // Check for specific keywords and respond accordingly
     let response;
     if (message.toLowerCase().includes("ca")) {
-      response = "GNffBwTbsRLSeFamRvtogVTzrTtoyxQbQTZDwpeipump";
+      response = "uploading...";
     } else if (message.toLowerCase().includes("twitter") || message.toLowerCase().includes("x")) {
-      response = <a href="https://x.com/aimegle89178" target="_blank" rel="noopener noreferrer" className='underline text-blue-700'>Follow us on Twitter/X</a>;
+      response = <a href="https://x.com/aimalintelsol" target="_blank" rel="noopener noreferrer" className='underline text-blue-700'>Follow us on Twitter/X</a>;
     } else if (message.toLowerCase().includes("telegram") || message.toLowerCase().includes("tg")) {
       response = <a href="https://t.me/aimegle" target="_blank" rel="noopener noreferrer" className='underline text-blue-700'>Join us on Telegram</a>;
     } else {
