@@ -136,7 +136,7 @@ function Big() {
     } else if (message.toLowerCase().includes("twitter") || message.toLowerCase().includes("x")) {
       response = <a href="https://x.com/aimalintelsol" target="_blank" rel="noopener noreferrer" className='underline text-blue-700'>Follow us on Twitter/X</a>;
     } else if (message.toLowerCase().includes("telegram") || message.toLowerCase().includes("tg")) {
-      response = <a href="https://t.me/aimegle" target="_blank" rel="noopener noreferrer" className='underline text-blue-700'>Join us on Telegram</a>;
+      response = <a href="https://t.me/animalintel" target="_blank" rel="noopener noreferrer" className='underline text-blue-700'>Join us on Telegram</a>;
     } else {
       // Select a random response from the current video
       response = videos[currentVideoIndex].responses[Math.floor(Math.random() * videos[currentVideoIndex].responses.length)];
